@@ -12,4 +12,13 @@ Languages
 - Java
 Libraries
 
+## Wireframe
+
+![wf of start screen](assets/images/wwcd_wf1.jpg)
+
+![wf of gameplay screen](assets/images/wwcd_wf2.jpg)
+
+![wf of winning hand](assets/images/wwcd_wf3.jpg)
+
+![wf of going broke](assets/images/wwcd_wf4.jpg)
 
