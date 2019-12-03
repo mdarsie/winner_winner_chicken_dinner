@@ -1,5 +1,20 @@
+header {
+    font-family: 'Shrikhand', cursive;
+    font-size: 70px;
+    color: #f2cb05;
+    text-align: center;
+}
+
 body {
     background: #166837 url(/assets/black-felt.png);
+}
+#blackjackPay{
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 50px;
+    color: #A60C81;
+    text-align: center;
 }
  .circle{ 
     display: flex;
@@ -9,3 +24,12 @@ body {
     border-radius:50%;        
     background: #166837 url(/assets/felt.png);
     }
+
+
+
+    /*font-family: 'Shrikhand', cursive;
+
+    font-family: 'Spectral SC', serif;
+
+    font-family: 'Playfair Display', serif;
+

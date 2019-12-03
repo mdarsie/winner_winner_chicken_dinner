@@ -1,7 +1,16 @@
 // an array containing the suits in a deck of cards
-var suits = ["spades", "diamonds", "clubs", "hearts"];
+var suit = ['spades', 'diamonds', 'clubs', 'hearts'];
 
 // an array containing all the possible values in a deck of cards
-var values = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+var value = ['A', 'K', 'Q', 'J', '10', '9', '8', '7', '6', '5', '4', '3', '2'];
 
-console.log(values, suits)
+// a new array to hold combined suit and values
+var deckComplete =  Array();
+
+// function combineArrays(){
+//     let deckComplete = Array();
+//     for(var i = 0; i < suit.length; i++){
+//         for(var x = 0; x < value.length; x++){
+        
+// }
+// console.log(Array(deckComplete))
