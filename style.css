@@ -1,3 +1,13 @@
 body {
-    background: #166837 /assets('black-felt.png')
+    background: #166837 url(/assets/black-felt.png);
 }
+
+
+ .circle{ 
+    display: flex;
+    flex-direction: row; 
+    width:150px;
+    height:150px;
+    border-radius:50%;        
+    background: #166837 url(/assets/felt.png);
+    }
