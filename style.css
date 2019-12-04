@@ -13,10 +13,27 @@ body {
     font-weight: 900;
     font-style: italic;
     font-size: 50px;
-    color: #A60C81;
+    color: #f2cb05;
     text-align: center;
+    margin: 0px, 50px, 0px;
+}
+#insurance{
+    font-family: 'Playfair Display', serif;
+    font-weight: 400i;
+    font-style: italic;
+    font-size: 50px;
+    color: #691b16;
+    text-align: center;
+    margin: 0px, 50px, 0px;    
     
 }
+#dealerRule{
+    font-family: 'Spectral SC', serif;
+    font-size: 50px;
+    color: #b50d02;
+    text-align: center; 
+    margin: 0px, 50px, 0px; 
+}    
  .circle{ 
     display: flex;
     flex-direction: column; 
