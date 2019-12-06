@@ -32,8 +32,22 @@ body {
     font-size: 50px;
     color: #b50d02;
     text-align: center; 
+    
+} 
+#player1{
+    font-size: 200px;
+    width: 140px;
+    height: 200px;
+    padding: 0px, 0px, 10px, 0px;
+    margin: 0px , 0px, 20px, 0px;
+    line-height: 103%;
+    background: white;
+    margin: auto;
+    border-radius: 5px;
+    vertical-align: top;
     margin: 0px, 50px, 0px; 
-}    
+
+}   
  .circle{ 
     display: grid;
     /* flex-direction: column;  */
