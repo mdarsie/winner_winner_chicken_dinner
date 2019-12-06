@@ -35,8 +35,8 @@ body {
     margin: 0px, 50px, 0px; 
 }    
  .circle{ 
-    display: flex;
-    flex-direction: column; 
+    display: grid;
+    /* flex-direction: column;  */
     width:150px;
     height:150px;
     border-radius:50%;        
