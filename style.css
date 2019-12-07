@@ -15,7 +15,8 @@ body {
     font-size: 50px;
     color: #f2cb05;
     text-align: center;
-    margin: 0px, 50px, 0px;
+    margin: 0px, 500pxpx, 0px;
+    line-height: 50%;
 }
 #insurance{
     font-family: 'Playfair Display', serif;
@@ -24,7 +25,8 @@ body {
     font-size: 50px;
     color: #691b16;
     text-align: center;
-    margin: 0px, 50px, 0px;    
+    margin: -50px, 50px, 0px; 
+   line 
     
 }
 #dealerRule{
@@ -37,10 +39,10 @@ body {
 #player1{
     font-size: 200px;
     width: 140px;
-    height: 200px;
+    height: 180px;
     padding: 0px, 0px, 10px, 0px;
     margin: 0px , 0px, 20px, 0px;
-    line-height: 103%;
+    line-height: 93%;
     background: white;
     margin: auto;
     border-radius: 5px;
@@ -50,9 +52,9 @@ body {
 }   
  .circle{ 
     display: grid;
-    /* flex-direction: column;  */
-    width:150px;
-    height:150px;
+    flex-direction: row; 
+    width:300px;
+    height:300px;
     border-radius:50%;        
     background: #166837 url(/assets/felt.png);
     }
