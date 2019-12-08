@@ -7,6 +7,7 @@ let newGameButton = document.getElementById("New Game");
 let hitButton = document.getElementById("Hit");
 let stayButton = document.getElementById("Stay");
 
+newGameButton.addEventListener("click", console.log(hello));
 //event listeners for game start, hit, stand
 
 // add values to array

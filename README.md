@@ -1,14 +1,10 @@
 # Winner, winner, chicken dinner!
 
-A JavaScript web app for playing Blackjack
+A JavaScript web app for playing Blackjack. [Play the game!](https://agitated-hamilton-7856ff.netlify.com)
 
 ## Overview
 
 The goal of this project is to implement HTML, CSS and JS skills learned by creating a blackjack web app. The player can choose how much money to buy in for and then play against a dealer a succession of hands. If a player is smart he will choose to end the game while he is ahead and walk away with a profit and a chicken dinner. Alternately, a player will eventually find himself broke and the game will end with the player hungry.
-
-## Name this section something later
-
-[Trello board](https://trello.com/b/1CzxLqAz)
 
 ## Technology Used
 
@@ -20,7 +16,11 @@ Languages
 
 Libraries
 
-## Wireframe
+- [CircleType.js](https://circletype.labwire.ca/)
+
+## Wireframe & Trello Board
+
+[Trello board](https://trello.com/b/1CzxLqAz)
 
 ![wf of start screen](assets/images/wwcd_wf1.jpg)
 
