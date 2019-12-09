@@ -1,73 +1,23 @@
+//circleType JS library
 const circleType = new CircleType(document.getElementById("blackjackPay"));
 circleType.radius(500).dir(-1);
 
 const circleTypeB = new CircleType(document.getElementById("softHit"));
 circleTypeB.radius(500).dir(-1);
 
+//global variables
 let playerHand = [];
 let dealerHand = [];
 let playerTotal = 0;
 let dealerTotal = 0;
 
+//game buttons
 var newGameButton = document.getElementById("newGame");
 var hitButton = document.getElementById("hit");
 var stayButton = document.getElementById("stand");
 var dealAgainButton = document.getElementById("playAgain");
 
-//a function to determine the values of the cards
-function cardValue(card) {
-  switch (card[1]) {
-    case "2":
-    case "3":
-    case "4":
-    case "5":
-    case "6":
-    case "7":
-    case "8":
-    case "9":
-      return parseInt(card[1]);
-    case "10":
-    case "J":
-    case "Q":
-    case "K":
-      return 10;
-    default:
-      return 11;
-  }
-}
-
-// a function to determine the value of a hand
-function handTotal(hand) {
-  var i = 0;
-  var aces = hand.filter(getAce);
-  var handValue = 0;
-
-  hand.forEach(function(card) {
-    return (handValue += cardValue(card));
-  });
-
-  if (aces.length !== 0) {
-    aces.forEach(function() {
-      if (handValue > 21) {
-        return (handValue -= 10);
-      }
-    });
-  }
-  return handValue;
-}
-
-//event listeners for game start, hit, stand, play again
-newGameButton.addEventListener("click", function() {
-  console.log("hello");
-});
-hitButton.addEventListener("click", function() {
-  console.log("hello");
-});
-dealAgainButton.addEventListener("click", function() {
-  console.log("hello");
-});
-
-// add values to array
+// add values to array to create deck of cards
 let deck = [
   "2H",
   "3H",
@@ -123,6 +73,57 @@ let deck = [
   "AD"
 ];
 
+//a function to determine the values of the cards
+function cardValue(card) {
+  switch (card[1]) {
+    case "2":
+    case "3":
+    case "4":
+    case "5":
+    case "6":
+    case "7":
+    case "8":
+    case "9":
+      return parseInt(card[1]);
+    case "10":
+    case "J":
+    case "Q":
+    case "K":
+      return 10;
+    default:
+      return 11;
+  }
+}
+
+// a function to determine the value of a hand
+function handTotal(hand) {
+  var i = 0;
+  var aces = hand.filter(getAce);
+  var handValue = 0;
+
+  hand.forEach(function(card) {
+    return (handValue += cardValue(card));
+  });
+
+  if (aces.length !== 0) {
+    aces.forEach(function() {
+      if (handValue > 21) {
+        return (handValue -= 10);
+      }
+    });
+  }
+  return handValue;
+}
+
+//event listeners for game start, hit, stand, play again
+newGameButton.addEventListener("click", function() {
+  console.log("hello");
+});
+
+dealAgainButton.addEventListener("click", function() {
+  console.log("hello");
+});
+
 //a function to shuffle the deck
 function shuffle(deck) {
   for (var i = 0; i < 500; i++) {
@@ -150,16 +151,18 @@ function dealHand() {
   deck.shift(0);
   return playerHand;
 }
-function displayCard() {
-  dealHand();
-  var cardPosition = document.getElementsByClassName(".playerCard1");
-  var card1 = object.values(playerHand)[0];
-  cardPosition.innerHTML += card1;
-}
 
 //push cards to gameboard
 
 //a function to hit for the player
+hitButton.addEventListener("click", function() {
+  playerHand.push(deck[0]);
+  deck.shift(0);
+  playerTotal = getHandValue(player);
+  if (playerTotal >= 21) {
+    winnerWinner();
+  }
+});
 
 //add event listener for stand button
 stayButton.addEventListener("click", function() {
