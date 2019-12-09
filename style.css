@@ -1,100 +1,232 @@
-.container{
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(20, 50px);
+.container {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(20, 50px);
 }
 
 header {
-    grid-area: 1 / 1 / 1 / 9;
-    font-family: 'Shrikhand', cursive;
-    font-size: 50px;
-    color: #f2cb05;
-    text-align: center;
+  grid-area: 1 / 1 / 1 / 9;
+  font-family: "Shrikhand", cursive;
+  font-size: 50px;
+  color: #f2cb05;
+  text-align: center;
 }
 
 body {
-    background: #166837 url(/assets/black-felt.png);
+  background: #166837 url(/assets/black-felt.png);
 }
-.payRule{
-    grid-area: 4/ 1 / 4/ 9;
+.payRule {
+  grid-area: 5 / 1 / 5 / 9;
 }
-#blackjackPay{
-    font-family: 'Spectral SC', serif;
-    font-size: 50px;
-    color: #b50d02;
-    text-align: center;
-    line-height: 50%;
-    z-index: 1;
+#blackjackPay {
+  font-family: "Spectral SC", serif;
+  font-size: 50px;
+  color: #b50d02;
+  text-align: center;
+  line-height: 50%;
+  z-index: 1;
 }
-.dealRule{
-    grid-area: 6 / 1 / 6/ 9;
-}
-
-#softHit{
-    font-family: 'Spectral SC', serif;
-    font-size: 40px;
-    color: #f2cb05;
-    text-align: center;  
-} 
-#pCard1{
-    z-index: 2;
-    font-size: 200px;
-    width: 140px;
-    height: 180px;
-    line-height: 93%;
-    background: white;
-    margin: auto;
-    border-radius: 5px;
-    
-     
-
-}   
-#circle1{
-    grid-area: 8 / 2 / 12 / 4;
-    justify-self: end;
-    width: 200px;
-    height:200px;
-    border-radius:50%;        
-    background: #166837 url(/assets/felt.png);
-}
-#circle2{
-    grid-area: 10 / 4 / 14 / 6;
-    justify-self: center;
-    width: 200px;
-    height:200px;
-    border-radius:50%;        
-    background: #166837 url(/assets/felt.png);
-}
-#circle3{
-    grid-area: 8 / 6 / 12 / 8;
-    justify-self: start;
-    width: 200px;
-    height:200px;
-    border-radius:50%;        
-    background: #166837 url(/assets/felt.png);
-}
-#circle4{
-    grid-area: 4 / 1 / 8 / 3;
-    justify-self: end;
-    width: 200px;
-    height:200px;
-    border-radius:50%;        
-    background: #166837 url(/assets/felt.png);
-}
-#circle5{
-    grid-area: 4 / 7 / 8 / 9;
-    justify-self: start;
-    width: 200px;
-    height:200px;
-    border-radius:50%;        
-    background: #166837 url(/assets/felt.png);
+.dealRule {
+  grid-area: 7 / 1 / 7 / 9;
 }
 
-
-
-    /*font-family: 'Shrikhand', cursive;
-
-    font-family: 'Spectral SC', serif;
-
-    font-family: 'Playfair Display', serif;
-
+#softHit {
+  font-family: "Spectral SC", serif;
+  font-size: 40px;
+  color: #f2cb05;
+  text-align: center;
+}
+.dealerCard1 {
+  grid-area: 3 / 5 / 3 / 5;
+  z-index: 1;
+  font-size: 150px;
+  width: 105px;
+  height: 135px;
+  line-height: 93%;
+  background: white;
+  justify-self: end;
+  border-radius: 5px;
+}
+.dealerCard2 {
+  grid-area: 3 / 5 / 3 / 5;
+  z-index: 2;
+  font-size: 150px;
+  width: 105px;
+  height: 135px;
+  line-height: 93%;
+  background: white;
+  justify-self: center;
+  border-radius: 5px;
+}
+.dealerCard3 {
+  grid-area: 3 / 5 / 3 / 5;
+  z-index: 3;
+  font-size: 150px;
+  width: 105px;
+  height: 135px;
+  line-height: 93%;
+  background: white;
+  justify-self: start;
+  border-radius: 5px;
+}
+.dealerCard4 {
+  grid-area: 3 / 4/ 3 / 4;
+  z-index: 4;
+  font-size: 150px;
+  width: 105px;
+  height: 135px;
+  line-height: 93%;
+  background: white;
+  justify-self: end;
+  border-radius: 5px;
+}
+.dealerCard5 {
+  grid-area: 3 / 3/ 3 / 3;
+  z-index: 4;
+  font-size: 150px;
+  width: 105px;
+  height: 135px;
+  line-height: 93%;
+  background: white;
+  justify-self: end;
+  border-radius: 5px;
+}
+.dealerCard6 {
+  grid-area: 3 / 2/ 3 / 2;
+  z-index: 4;
+  font-size: 150px;
+  width: 105px;
+  height: 135px;
+  line-height: 93%;
+  background: white;
+  justify-self: end;
+  border-radius: 5px;
+}
+.dealerCard7 {
+  grid-area: 3 / 1/ 3 / 1;
+  z-index: 4;
+  font-size: 150px;
+  width: 105px;
+  height: 135px;
+  line-height: 93%;
+  background: white;
+  justify-self: end;
+  border-radius: 5px;
+}
+.playerCard1 {
+  grid-area: 11 / 5 / 11 / 5;
+  z-index: 1;
+  font-size: 150px;
+  width: 105px;
+  height: 135px;
+  line-height: 93%;
+  background: white;
+  justify-self: end;
+  border-radius: 5px;
+}
+.playerCard2 {
+  grid-area: 11 / 5 / 11 / 5;
+  z-index: 2;
+  font-size: 150px;
+  width: 105px;
+  height: 135px;
+  line-height: 93%;
+  background: white;
+  justify-self: center;
+  border-radius: 5px;
+}
+.playerCard3 {
+  grid-area: 11 / 5 / 11 / 5;
+  z-index: 3;
+  font-size: 150px;
+  width: 105px;
+  height: 135px;
+  line-height: 93%;
+  background: white;
+  justify-self: start;
+  border-radius: 5px;
+}
+.playerCard4 {
+  grid-area: 11 / 4/ 11 / 4;
+  z-index: 4;
+  font-size: 150px;
+  width: 105px;
+  height: 135px;
+  line-height: 93%;
+  background: white;
+  justify-self: end;
+  border-radius: 5px;
+}
+.playerCard5 {
+  grid-area: 11 / 3/ 11 / 3;
+  z-index: 4;
+  font-size: 150px;
+  width: 105px;
+  height: 135px;
+  line-height: 93%;
+  background: white;
+  justify-self: end;
+  border-radius: 5px;
+}
+.playerCard6 {
+  grid-area: 11 / 2/ 11 / 2;
+  z-index: 4;
+  font-size: 150px;
+  width: 105px;
+  height: 135px;
+  line-height: 93%;
+  background: white;
+  justify-self: end;
+  border-radius: 5px;
+}
+.playerCard7 {
+  grid-area: 11 / 1/ 11 / 1;
+  z-index: 4;
+  font-size: 150px;
+  width: 105px;
+  height: 135px;
+  line-height: 93%;
+  background: white;
+  justify-self: end;
+  border-radius: 5px;
+}
+#circle1 {
+  grid-area: 9 / 2 / 13 / 4;
+  justify-self: end;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: #166837 url(/assets/felt.png);
+}
+#circle2 {
+  grid-area: 11 / 4 / 15 / 6;
+  justify-self: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: #166837 url(/assets/felt.png);
+}
+#circle3 {
+  grid-area: 9 / 6 / 13 / 8;
+  justify-self: start;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: #166837 url(/assets/felt.png);
+}
+#circle4 {
+  grid-area: 5 / 1 / 9 / 3;
+  justify-self: end;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: #166837 url(/assets/felt.png);
+}
+#circle5 {
+  grid-area: 5 / 7 / 9 / 9;
+  justify-self: start;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: #166837 url(/assets/felt.png);
+}
