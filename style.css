@@ -15,43 +15,37 @@ header {
 body {
     background: #166837 url(/assets/black-felt.png);
 }
+.payRule{
+    grid-area: 4/ 1 / 4/ 9;
+}
 #blackjackPay{
-    font-family: 'Playfair Display', serif;
-    font-weight: 900;
-    font-style: italic;
-    font-size: 50px;
-    color: #f2cb05;
-    text-align: center;
-    margin: 0px, 500pxpx, 0px;
-    line-height: 50%;
-}
-#insurance{
-    font-family: 'Playfair Display', serif;
-    font-weight: 400i;
-    font-style: italic;
-    font-size: 50px;
-    color: #691b16;
-    text-align: center;
-    margin: -50px, 50px, 0px; 
-}
-#dealerRule{
     font-family: 'Spectral SC', serif;
     font-size: 50px;
     color: #b50d02;
-    text-align: center; 
-    
+    text-align: center;
+    line-height: 50%;
+    z-index: 1;
+}
+.dealRule{
+    grid-area: 6 / 1 / 6/ 9;
+}
+
+#softHit{
+    font-family: 'Spectral SC', serif;
+    font-size: 40px;
+    color: #f2cb05;
+    text-align: center;  
 } 
 #pCard1{
+    z-index: 2;
     font-size: 200px;
     width: 140px;
     height: 180px;
-    padding: 0px, 0px, 10px, 0px;
-    margin: 0px , 0px, 20px, 0px;
     line-height: 93%;
     background: white;
     margin: auto;
     border-radius: 5px;
-    vertical-align: top;
+    
      
 
 }   

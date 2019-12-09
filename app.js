@@ -119,11 +119,11 @@ stayButton.addEventListener("click", function() {
 
 //declare the winner or loser
 
-// const circleType = new CircleType(document.getElementById("blackjackPay"));
-// circleType.radius(360).dir(-1);
+const circleType = new CircleType(document.getElementById("blackjackPay"));
+circleType.radius(500).dir(-1);
 
-// const circleTypeB = new CircleType(document.getElementById("dealerRule"));
-// circleTypeB.radius(360).dir(-1);
+const circleTypeB = new CircleType(document.getElementById("softHit"));
+circleTypeB.radius(500).dir(-1);
 
 // const circleTypeC = new CircleType(document.getElementById("circle"));
 // circleTypeC.radius(360).dir(-1);
