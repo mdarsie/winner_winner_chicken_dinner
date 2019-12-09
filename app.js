@@ -153,7 +153,22 @@ function dealHand() {
 }
 
 //push cards to gameboard
+function displayCardsD(card, dealerCardRow, faceUp) {
+  var cardImg = document.createElement("img");
+  cardImg.classList.add("card");
+  if (faceUp) {
+    cardImg.src = "assets/cards" + card + ".png";
+  } else {
+    cardImg.src = "assets/cards/cardback.png";
+  }
+  dealerCardRow.appendChild(cardImg);
+}
 
+function displayCardsP(card, playerCardsRow) {
+  var cardImg = document.createElement("img");
+  cardImg.classList.add("card");
+  cardImg.src = "assets/cards" + card + ".png";
+}
 //a function to hit for the player
 hitButton.addEventListener("click", function() {
   playerHand.push(deck[0]);
@@ -164,12 +179,15 @@ hitButton.addEventListener("click", function() {
   }
 });
 
-//add event listener for stand button
+//add event listener for stand button which will play dealer's hand
 stayButton.addEventListener("click", function() {
-  console.log("hello");
+  dealerTotal = getHandValue(dealer);
+  while (dealerTotal <= 16) {
+    dealerHand.push(deck[o]);
+    deck.shift(0);
+  }
+  winnerWinner();
 });
-
-//a function to play the dealer's hand
 
 //declare the winner or loser
 function winnerWinner() {

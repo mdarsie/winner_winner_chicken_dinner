@@ -15,6 +15,15 @@ header {
 body {
   background: #166837 url(/assets/black-felt.png);
 }
+.dealerCardsRow {
+  grid-area: 3 / 2/ 3 / 8;
+  height: 150px;
+}
+#dealerCards {
+  height: 150px;
+  margin: 10px;
+  justify-self: center;
+}
 .payRule {
   grid-area: 5 / 1 / 5 / 9;
 }
@@ -24,7 +33,7 @@ body {
   color: #b50d02;
   text-align: center;
   line-height: 50%;
-  z-index: 1;
+  z-index: -1;
 }
 .dealRule {
   grid-area: 7 / 1 / 7 / 9;
@@ -36,160 +45,6 @@ body {
   color: #f2cb05;
   text-align: center;
 }
-/* .dealerCard1 {
-  grid-area: 3 / 5 / 3 / 5;
-  z-index: 1;
-  font-size: 150px;
-  width: 105px;
-  height: 135px;
-  line-height: 93%;
-  background: white;
-  justify-self: end;
-  border-radius: 5px;
-}
-.dealerCard2 {
-  grid-area: 3 / 5 / 3 / 5;
-  z-index: 2;
-  font-size: 150px;
-  width: 105px;
-  height: 135px;
-  line-height: 93%;
-  background: white;
-  justify-self: center;
-  border-radius: 5px;
-}
-.dealerCard3 {
-  grid-area: 3 / 5 / 3 / 5;
-  z-index: 3;
-  font-size: 150px;
-  width: 105px;
-  height: 135px;
-  line-height: 93%;
-  background: white;
-  justify-self: start;
-  border-radius: 5px;
-}
-.dealerCard4 {
-  grid-area: 3 / 4/ 3 / 4;
-  z-index: 4;
-  font-size: 150px;
-  width: 105px;
-  height: 135px;
-  line-height: 93%;
-  background: white;
-  justify-self: end;
-  border-radius: 5px;
-}
-.dealerCard5 {
-  grid-area: 3 / 3/ 3 / 3;
-  z-index: 4;
-  font-size: 150px;
-  width: 105px;
-  height: 135px;
-  line-height: 93%;
-  background: white;
-  justify-self: end;
-  border-radius: 5px;
-}
-.dealerCard6 {
-  grid-area: 3 / 2/ 3 / 2;
-  z-index: 4;
-  font-size: 150px;
-  width: 105px;
-  height: 135px;
-  line-height: 93%;
-  background: white;
-  justify-self: end;
-  border-radius: 5px;
-}
-.dealerCard7 {
-  grid-area: 3 / 1/ 3 / 1;
-  z-index: 4;
-  font-size: 150px;
-  width: 105px;
-  height: 135px;
-  line-height: 93%;
-  background: white;
-  justify-self: end;
-  border-radius: 5px;
-}
-.playerCard1 {
-  grid-area: 11 / 5 / 11 / 5;
-  z-index: 1;
-  font-size: 150px;
-  width: 105px;
-  height: 135px;
-  line-height: 93%;
-  background: white;
-  justify-self: end;
-  border-radius: 5px;
-}
-.playerCard2 {
-  grid-area: 11 / 5 / 11 / 5;
-  z-index: 2;
-  font-size: 150px;
-  width: 105px;
-  height: 135px;
-  line-height: 93%;
-  background: white;
-  justify-self: center;
-  border-radius: 5px;
-}
-.playerCard3 {
-  grid-area: 11 / 5 / 11 / 5;
-  z-index: 3;
-  font-size: 150px;
-  width: 105px;
-  height: 135px;
-  line-height: 93%;
-  background: white;
-  justify-self: start;
-  border-radius: 5px;
-}
-.playerCard4 {
-  grid-area: 11 / 4/ 11 / 4;
-  z-index: 4;
-  font-size: 150px;
-  width: 105px;
-  height: 135px;
-  line-height: 93%;
-  background: white;
-  justify-self: end;
-  border-radius: 5px;
-}
-.playerCard5 {
-  grid-area: 11 / 3/ 11 / 3;
-  z-index: 4;
-  font-size: 150px;
-  width: 105px;
-  height: 135px;
-  line-height: 93%;
-  background: white;
-  justify-self: end;
-  border-radius: 5px;
-}
-.playerCard6 {
-  grid-area: 11 / 2/ 11 / 2;
-  z-index: 4;
-  font-size: 150px;
-  width: 105px;
-  height: 135px;
-  line-height: 93%;
-  background: white;
-  justify-self: end;
-  border-radius: 5px;
-}
-.playerCard7 {
-  grid-area: 11 / 1/ 11 / 1;
-  z-index: 4;
-  font-size: 150px;
-  width: 105px;
-  height: 135px;
-  line-height: 93%;
-  background: white;
-  justify-self: end;
-  border-radius: 5px; */
-/* } */
 #circle1 {
   grid-area: 9 / 2 / 13 / 4;
   justify-self: end;
@@ -229,4 +84,13 @@ body {
   height: 200px;
   border-radius: 50%;
   background: #166837 url(/assets/felt.png);
+}
+.playerCardsRow {
+  grid-area: 10 / 2/ 10 / 8;
+  height: 150px;
+}
+#playerCards {
+  height: 150px;
+  margin: 10px;
+  justify-self: center;
 }
