@@ -15,17 +15,18 @@ header {
 body {
   background: #166837 url(/assets/black-felt.png);
 }
-.dealerCardsRow {
-  height: 150px;
-}
 .card {
   height: 150px;
   margin: 10px;
   justify-self: center;
 }
+#dealerCardsRow {
+  height: 150px;
+}
 #playerCardsRow {
   height: 150px;
 }
-.playerScore {
+.scores {
   color: white;
+  font: 50px;
 }

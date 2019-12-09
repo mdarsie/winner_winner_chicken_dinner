@@ -4,12 +4,14 @@ var hitButton = document.getElementById("hit");
 var stayButton = document.getElementById("stand");
 var dealAgainButton = document.getElementById("playAgain");
 
-//player score display
+//game scores
+var scores = document.getElementById("scores");
+var dealerScore = document.getElementById("dealerScore");
 var playerScore = document.getElementById("playerScore");
 
 //cards to display
-var playerCardsRow = document.getElementById("playerCards");
-var dealerCardsRow = document.getElementById("dealerCards");
+var playerCardsRow = document.getElementById("playerCardsRow");
+var dealerCardsRow = document.getElementById("dealerCardsRow");
 
 //global variables
 let playerHand = [];
@@ -44,16 +46,13 @@ function getAce(card) {
     return card;
   }
 }
-
 function handTotal(hand) {
   var i = 0;
   var aces = hand.filter(getAce);
   var handValue = 0;
-
   hand.forEach(function(card) {
     return (handValue += cardValue(card));
   });
-
   if (aces.length !== 0) {
     aces.forEach(function() {
       if (handValue > 21) {
@@ -63,19 +62,16 @@ function handTotal(hand) {
   }
   return handValue;
 }
-
 //event listeners for game start, hit, stand, play again
 newGameButton.addEventListener("click", function() {
-  console.log("hello");
   deck = shuffle();
-  console.log(deck);
   playerHand.push(deck.shift());
   dealerHand.push(deck.shift());
   playerHand.push(deck.shift());
   dealerHand.push(deck.shift());
   console.log("player: ", playerHand);
 
-  displayCardsP(playerHand[0], playerCards, true);
+  displayCardsP(playerHand[0], playerCardsRow, true);
   displayCardsD(dealerHand[0], dealerCardsRow, true);
   displayCardsP(playerHand[1], playerCardsRow, true);
   displayCardsD(dealerHand[1], dealerCardsRow, false);
@@ -87,9 +83,8 @@ newGameButton.addEventListener("click", function() {
   console.log("player: ", playerTotal);
   console.log("dealer: ", dealerTotal);
   if (dealerTotal === 21 || playerTotal === 21) {
-    showCardsOnTable(dealerHand[0], dealerCards, true);
-    showCardsOnTable(dealerHand[1], dealerCards, true);
     dealerTotal = handTotal(dealerHand);
+    document.getElementById("dealerScore").innerHTML = "Dealer: " + dealerTotal;
     winnerWinner();
   }
 });
@@ -102,36 +97,47 @@ function displayCardsD(card, dealerCardsRow, faceUp) {
   } else {
     cardImg.src = "assets/cards/cardback.png";
   }
-  dealerCardsRow.appendChild(cardImg);
+  dealerCards.appendChild(cardImg);
 }
 //show player cards
 function displayCardsP(card, playerCardsRow) {
   var cardImg = document.createElement("img");
   cardImg.classList.add("card");
   cardImg.src = "assets/cards/" + card + ".png";
-  playerCardsRow.appendChild(cardImg);
+  playerCards.appendChild(cardImg);
 }
 //a function to hit for the player
 hitButton.addEventListener("click", function() {
   playerHand.push(deck.shift());
   var lastIndex = playerHand.length - 1;
-  displayCardsP(playerHand[lastIndex], playerCards);
+  displayCardsP(playerHand[lastIndex], playerCardsRow);
   playerTotal = handTotal(playerHand);
+  document.getElementById("playerScore").innerHTML = "Player: " + playerTotal;
   if (playerTotal >= 21) {
-    winnerWinner();
-    displayCardsD(dealerHand[0], dealerCardsRow, true);
-    displayCardsD(dealerHand[1], dealerCardsRow, false);
+    var lastIndex = dealerHand.length - 1;
+    displayCardsD(dealerHand[lastIndex], dealerCardsRow, true);
+    dealerTotal = handTotal(dealerHand);
+    document.getElementById("dealerScore").innerHTML = "Dealer: " + dealerTotal;
   }
+  console.log("player: ", playerTotal);
+  console.log("dealer: ", dealerTotal);
+  winnerWinner();
 });
 //add event listener for stand button which will play dealer's hand
 stayButton.addEventListener("click", function() {
+  document.getElementById("dealerCards").innerHTML = "";
   displayCardsD(dealerHand[0], dealerCardsRow, true);
-  displayCardsD(dealerHand[1], dealerCardsRow, false);
+  displayCardsD(dealerHand[1], dealerCardsRow, true);
   dealerTotal = handTotal(dealerHand);
   while (dealerTotal <= 16) {
     dealerHand.push(deck.shift());
+    var lastIndex = dealerHand.length - 1;
+    displayCardsD(dealerHand[lastIndex], dealerCardsRow, true);
     dealerTotal = handTotal(dealerHand);
+    document.getElementById("dealerScore").innerHTML = "Dealer: " + dealerTotal;
   }
+  console.log("player: ", playerTotal);
+  console.log("dealer: ", dealerTotal);
   winnerWinner();
 });
 //logic to determine the winner of the game
@@ -142,10 +148,16 @@ function winnerWinner() {
     alert("You tied!");
   } else if (dealerTotal > playerTotal) {
     if (dealerTotal === 21) {
+      document.getElementById("dealerScore").innerHTML =
+        "Dealer: " + dealerTotal;
       alert("Loser, loser! Dealer has Blackjack!");
     } else if (dealerTotal > 21) {
+      document.getElementById("dealerScore").innerHTML =
+        "Dealer: " + dealerTotal;
       alert("Winner, winner!");
     } else {
+      document.getElementById("dealerScore").innerHTML =
+        "Dealer: " + dealerTotal;
       alert("Loser, loser! Dealer wins!");
     }
   } else {
@@ -160,11 +172,12 @@ function winnerWinner() {
 }
 //play again button
 dealAgainButton.addEventListener("click", function() {
+  location.reload(true);
   document.getElementById("playerScore").innerHTML = "";
   playerHand.length = 0;
   dealerHand.length = 0;
-  playerTotal = 0;
-  dealerTotal = 0;
+  let playerTotal = 0;
+  let dealerTotal = 0;
   document.getElementById("playerCards").innerHTML = "";
   document.getElementById("dealerCards").innerHTML = "";
   deck = shuffle();
@@ -172,8 +185,8 @@ dealAgainButton.addEventListener("click", function() {
   dealerHand.push(deck.shift());
   playerHand.push(deck.shift());
   dealerHand.push(deck.shift());
-  var dealerTotal = handTotal(dealer);
-  var playerTotal = handTotal(player);
+  console.log("player: ", playerHand);
+  console.log("dealer: ", dealerHand);
   document.getElementById("playerScore").innerHTML = "Player: " + playerTotal;
   if (dealerTotal === 21 || playerTotal === 21) {
     document.getElementById("dealerCards").innerHTML = "";
