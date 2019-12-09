@@ -36,7 +36,7 @@ body {
   color: #f2cb05;
   text-align: center;
 }
-.dealerCard1 {
+/* .dealerCard1 {
   grid-area: 3 / 5 / 3 / 5;
   z-index: 1;
   font-size: 150px;
@@ -188,8 +188,8 @@ body {
   line-height: 93%;
   background: white;
   justify-self: end;
-  border-radius: 5px;
-}
+  border-radius: 5px; */
+/* } */
 #circle1 {
   grid-area: 9 / 2 / 13 / 4;
   justify-self: end;
