@@ -104,7 +104,12 @@ function dealHand() {
   deck.shift(0);
   return playerHand;
 }
-console.log(dealHand());
+function displayCard() {
+  dealHand();
+  var cardPosition = document.getElementsByClassName(".playerCard1");
+  var card1 = object.values(playerHand)[0];
+  cardPosition.innerHTML += card1;
+}
 
 //push cards to gameboard
 
