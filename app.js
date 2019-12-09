@@ -92,9 +92,9 @@ newGameButton.addEventListener("click", function() {
   console.log("player: ", playerTotal);
   console.log("dealer: ", dealerTotal);
   if (dealerTotal === 21 || playerTotal === 21) {
-    showCardsOnTable(dealer[0], dealerCards, true);
-    showCardsOnTable(dealer[1], dealerCards, true);
-    dealerTotal = getHandValue(dealer);
+    showCardsOnTable(dealerHand[0], dealerCards, true);
+    showCardsOnTable(dealerHand[1], dealerCards, true);
+    dealerTotal = handTotal(dealerHand);
     winnerWinner();
   }
 });
@@ -103,7 +103,7 @@ function displayCardsD(card, dealerCardsRow, faceUp) {
   var cardImg = document.createElement("img");
   cardImg.classList.add("card");
   if (faceUp) {
-    cardImg.src = "assets/cards" + card + ".png";
+    cardImg.src = "assets/cards/" + card + ".png";
   } else {
     cardImg.src = "assets/cards/cardback.png";
   }
@@ -117,25 +117,30 @@ function displayCardsP(card, playerCardsRow) {
 }
 //a function to hit for the player
 hitButton.addEventListener("click", function() {
-  playerHand.push(deck[0]);
-  deck.shift(0);
-  playerTotal = getHandValue(player);
+  playerHand.push(deck.shift());
+  var lastIndex = playerHand.length - 1;
+  displayCardsP(playerHand[lastIndex], playerCards);
+  playerTotal = handTotal(playerHand);
   if (playerTotal >= 21) {
     winnerWinner();
+    displayCardsD(dealerHand[0], dealerCardsRow, true);
+    displayCardsD(dealerHand[1], dealerCardsRow, false);
   }
 });
 //add event listener for stand button which will play dealer's hand
 stayButton.addEventListener("click", function() {
-  dealerTotal = getHandValue(dealer);
+  displayCardsD(dealerHand[0], dealerCardsRow, true);
+  displayCardsD(dealerHand[1], dealerCardsRow, false);
+  dealerTotal = handTotal(dealerHand);
   while (dealerTotal <= 16) {
-    dealerHand.push(deck[o]);
-    deck.shift(0);
+    dealerHand.push(deck.shift());
+    dealerTotal = handTotal(dealerHand);
   }
   winnerWinner();
 });
 function winnerWinner() {
-  dealerTotal = getHandValue(dealer);
-  playerTotal = getHandValue(player);
+  dealerTotal = handTotal(dealerHand);
+  playerTotal = handTotal(playerHand);
   if (playerTotal === dealerTotal) {
     alert("You tied!");
   } else if (dealerTotal > playerTotal) {
