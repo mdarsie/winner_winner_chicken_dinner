@@ -1,14 +1,25 @@
 let playerHand = [];
 let dealerHand = [];
+let playerTotal = 0;
+let dealerTotal = 0;
 
 //a function to determine the value of the hand and the parameters for winning or losing
 
-let newGameButton = document.getElementById("New Game");
-let hitButton = document.getElementById("Hit");
-let stayButton = document.getElementById("Stay");
+var newGameButton = document.getElementById("newGame");
+var hitButton = document.getElementById("hit");
+var stayButton = document.getElementById("stand");
+var dealAgainButton = document.getElementById("playAgain");
 
-newGameButton.addEventListener("click", console.log(hello));
-//event listeners for game start, hit, stand
+//event listeners for game start, hit, stand, play again
+newGameButton.addEventListener("click", function() {
+  console.log("hello");
+});
+hitButton.addEventListener("click", function() {
+  console.log("hello");
+});
+dealAgainButton.addEventListener("click", function() {
+  console.log("hello");
+});
 
 // add values to array
 let deck = [
@@ -82,9 +93,14 @@ function shuffle(deck) {
 function dealHand() {
   shuffle(deck);
   var playerHand = new Array();
+  var dealerHand = new Array();
   playerHand.push(deck[0]);
   deck.shift(0);
+  dealerHand.push(deck[0]);
+  deck.shift(0);
   playerHand.push(deck[0]);
+  deck.shift(0);
+  dealerHand.push(deck[0]);
   deck.shift(0);
   return playerHand;
 }
@@ -95,6 +111,9 @@ console.log(dealHand());
 //a function to hit for the player
 
 //add event listener for stand button
+stayButton.addEventListener("click", function() {
+  console.log("hello");
+});
 
 //a function to play the dealer's hand
 
