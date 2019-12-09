@@ -11,25 +11,52 @@
       rel="stylesheet"
     />
   </head>
+  <div class="grid container">
   <header>Winner, winner, chicken dinner!</header>
   <body>
-    <p class="tablerules" id="blackjackPay">Blackjack pays 3 to 2</p>
+    <!-- <p class="tablerules" id="blackjackPay">Blackjack pays 3 to 2</p>
     <p class="tablerules" id="dealerRule">Dealer must hit soft 17</p>
-    
+     -->
 
-    <div class="gameboard" id="player1">&#127137</div>
+    <!-- <div class="gameboard" id="player1">&#127137</div> -->
 
-    <div class="circle" id="card"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
+    <div class="circle" id="circle1"></div>
+    <div class="circle" id= "circle2"></div>
+    <div class="circle" id= "circle3"></div>
+    <div class="circle" id= "circle4"></div>
+    <div class="circle" id= "circle5"></div>
+  
 
-    <div class="playerOption"></div>
-    <input class="playerOptions" type="button" value="New Game" id="newGame"/>
+    <div class="playerOption">
+    <input class="playerOptions" type="button" value="New Game" id="newGame" />
     <input class="playerOptions" type="button" value="Hit" id="hit" />
-    <input class="playerOptions" type="button" value="Stand" id="stand"/>
-    <input class="playerOptions" type="button" value="Play Again" id="playAgain" />
+    <input class="playerOptions" type="button" value="Stand" id="stand" />
+    <input class="playerOptions" type="button" value="Play Again" id="playAgain"/></div>
+   
+
+    <div class="dealerCards">
+      <div class="dealerCards", id= "dCard1"></div>
+      <div class="dealerCards", id= "dCard2"></div>
+      <div class="dealerCards", id= "dCard3"></div>
+      <div class="dealerCards", id= "dCard4"></div>
+      <div class="dealerCards", id= "dCard5"></div>
+      <div class="dealerCards", id= "dCard6"></div>
+      <div class="dealerCards", id= "dCard7"></div>
+      <div class="dealerCards", id= "dCard8"></div>
+    </div>
+
+    <div class="playerCards">
+      <div class="playerCards", id= "pCard1"></div>
+      <div class="playerCards", id= "pCard2"></div>
+      <div class="playerCards", id= "pCard3"></div>
+      <div class="playerCards", id= "pCard4"></div>
+      <div class="playerCards", id= "pCard5"></div>
+      <div class="playerCards", id= "pCard6"></div>
+      <div class="playerCards", id= "pCard7"></div>
+      <div class="playerCards", id= "pCard8"></div>
+    </div>
+  </div>
+    
     <script src="circletype.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
   </body>
