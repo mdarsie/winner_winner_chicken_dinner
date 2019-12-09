@@ -1,10 +1,3 @@
-//circleType JS library
-const circleType = new CircleType(document.getElementById("blackjackPay"));
-circleType.radius(500).dir(-1);
-
-const circleTypeB = new CircleType(document.getElementById("softHit"));
-circleTypeB.radius(500).dir(-1);
-
 //game buttons
 var newGameButton = document.getElementById("newGame");
 var hitButton = document.getElementById("hit");
@@ -82,13 +75,15 @@ newGameButton.addEventListener("click", function() {
   dealerHand.push(deck.shift());
   console.log("player: ", playerHand);
 
-  displayCardsP(playerHand[0], playerCardsRow);
+  displayCardsP(playerHand[0], playerCards, true);
   displayCardsD(dealerHand[0], dealerCardsRow, true);
-  displayCardsP(playerHand[1], playerCardsRow);
+  displayCardsP(playerHand[1], playerCardsRow, true);
   displayCardsD(dealerHand[1], dealerCardsRow, false);
 
   var dealerTotal = handTotal(dealerHand);
   var playerTotal = handTotal(playerHand);
+  document.getElementById("playerScore").innerHTML = "Player: " + playerTotal;
+
   console.log("player: ", playerTotal);
   console.log("dealer: ", dealerTotal);
   if (dealerTotal === 21 || playerTotal === 21) {
@@ -113,7 +108,8 @@ function displayCardsD(card, dealerCardsRow, faceUp) {
 function displayCardsP(card, playerCardsRow) {
   var cardImg = document.createElement("img");
   cardImg.classList.add("card");
-  cardImg.src = "assets/cards" + card + ".png";
+  cardImg.src = "assets/cards/" + card + ".png";
+  playerCardsRow.appendChild(cardImg);
 }
 //a function to hit for the player
 hitButton.addEventListener("click", function() {
@@ -138,6 +134,7 @@ stayButton.addEventListener("click", function() {
   }
   winnerWinner();
 });
+//logic to determine the winner of the game
 function winnerWinner() {
   dealerTotal = handTotal(dealerHand);
   playerTotal = handTotal(playerHand);
@@ -161,6 +158,31 @@ function winnerWinner() {
     }
   }
 }
+//play again button
+dealAgainButton.addEventListener("click", function() {
+  document.getElementById("playerScore").innerHTML = "";
+  playerHand.length = 0;
+  dealerHand.length = 0;
+  playerTotal = 0;
+  dealerTotal = 0;
+  document.getElementById("playerCards").innerHTML = "";
+  document.getElementById("dealerCards").innerHTML = "";
+  deck = shuffle();
+  playerHand.push(deck.shift());
+  dealerHand.push(deck.shift());
+  playerHand.push(deck.shift());
+  dealerHand.push(deck.shift());
+  var dealerTotal = handTotal(dealer);
+  var playerTotal = handTotal(player);
+  document.getElementById("playerScore").innerHTML = "Player: " + playerTotal;
+  if (dealerTotal === 21 || playerTotal === 21) {
+    document.getElementById("dealerCards").innerHTML = "";
+    displayCardsD(dealer[0], dealerCardsRow, true);
+    displayCardsD(dealer[1], dealerCardsRow, true);
+    dealerTotal = getHandValue(dealerHand);
+    showWinner();
+  }
+});
 
 // add values to array to create deck of cards
 function shuffle() {
@@ -227,13 +249,3 @@ function shuffle() {
   }
   return deck;
 }
-
-// dealAgainButton.addEventListener("click", function() {
-//   console.log("hello");
-// });
-
-//a function to shuffle the deck
-
-//push cards to gameboard
-
-//declare the winner or loser

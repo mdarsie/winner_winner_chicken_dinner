@@ -16,84 +16,16 @@ body {
   background: #166837 url(/assets/black-felt.png);
 }
 .dealerCardsRow {
-  grid-area: 3 / 2/ 3 / 8;
   height: 150px;
 }
-#dealerCards {
-  height: 150px;
-  margin: 10px;
-  justify-self: center;
-}
-.payRule {
-  grid-area: 5 / 1 / 5 / 9;
-}
-#blackjackPay {
-  font-family: "Spectral SC", serif;
-  font-size: 50px;
-  color: #b50d02;
-  text-align: center;
-  line-height: 50%;
-  z-index: -1;
-}
-.dealRule {
-  grid-area: 7 / 1 / 7 / 9;
-}
-
-#softHit {
-  font-family: "Spectral SC", serif;
-  font-size: 40px;
-  color: #f2cb05;
-  text-align: center;
-}
-#circle1 {
-  grid-area: 9 / 2 / 13 / 4;
-  justify-self: end;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background: #166837 url(/assets/felt.png);
-}
-#circle2 {
-  grid-area: 11 / 4 / 15 / 6;
-  justify-self: center;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background: #166837 url(/assets/felt.png);
-}
-#circle3 {
-  grid-area: 9 / 6 / 13 / 8;
-  justify-self: start;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background: #166837 url(/assets/felt.png);
-}
-#circle4 {
-  grid-area: 5 / 1 / 9 / 3;
-  justify-self: end;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background: #166837 url(/assets/felt.png);
-}
-#circle5 {
-  grid-area: 5 / 7 / 9 / 9;
-  justify-self: start;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background: #166837 url(/assets/felt.png);
-}
-.playerCardsRow {
-  grid-area: 10 / 2/ 10 / 8;
-  height: 150px;
-}
-#playerCards {
+.card {
   height: 150px;
   margin: 10px;
   justify-self: center;
 }
-#playerScore {
+#playerCardsRow {
+  height: 150px;
+}
+.playerScore {
   color: white;
 }
