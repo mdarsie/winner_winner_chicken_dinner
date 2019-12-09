@@ -10,6 +10,7 @@ let playerHand = [];
 let dealerHand = [];
 let playerTotal = 0;
 let dealerTotal = 0;
+var playerScore = document.getElementById("playerScore");
 
 //game buttons
 var newGameButton = document.getElementById("newGame");
@@ -94,7 +95,6 @@ function cardValue(card) {
       return 11;
   }
 }
-
 // a function to determine the value of a hand
 function handTotal(hand) {
   var i = 0;
@@ -114,45 +114,6 @@ function handTotal(hand) {
   }
   return handValue;
 }
-
-//event listeners for game start, hit, stand, play again
-newGameButton.addEventListener("click", function() {
-  console.log("hello");
-});
-
-dealAgainButton.addEventListener("click", function() {
-  console.log("hello");
-});
-
-//a function to shuffle the deck
-function shuffle(deck) {
-  for (var i = 0; i < 500; i++) {
-    var space1 = Math.floor(Math.random() * deck.length);
-    var space2 = Math.floor(Math.random() * deck.length);
-    var placeHolder = deck[space1];
-    deck[space1] = deck[space2];
-    deck[space2] = placeHolder;
-  }
-  return deck;
-}
-
-//a function to deal the dealer and player hands
-function dealHand() {
-  shuffle(deck);
-  var playerHand = new Array();
-  var dealerHand = new Array();
-  playerHand.push(deck[0]);
-  deck.shift(0);
-  dealerHand.push(deck[0]);
-  deck.shift(0);
-  playerHand.push(deck[0]);
-  deck.shift(0);
-  dealerHand.push(deck[0]);
-  deck.shift(0);
-  return playerHand;
-}
-
-//push cards to gameboard
 function displayCardsD(card, dealerCardRow, faceUp) {
   var cardImg = document.createElement("img");
   cardImg.classList.add("card");
@@ -177,6 +138,44 @@ hitButton.addEventListener("click", function() {
   if (playerTotal >= 21) {
     winnerWinner();
   }
+//event listeners for game start, hit, stand, play again
+newGameButton.addEventListener("click", function() {
+  deck = shuffle();
+  var playerHand = new Array();
+  var dealerHand = new Array();
+  playerHand.push(deck[0]);
+  deck.shift(0);
+  dealerHand.push(deck[0]);
+  deck.shift(0);
+  playerHand.push(deck[0]);
+  deck.shift(0);
+  dealerHand.push(deck[0]);
+  deck.shift(0);
+  
+  
+});
+function displayCardsP(playerHand[0], playerCardsRow)
+function displayCardsD(dealerHand[0], dealerCardRow, true)
+function displayCardsP(playerHand[1], playerCardsRow)
+function displayCardsD(dealerHand([1]), dealerCardRow, false)
+
+dealAgainButton.addEventListener("click", function() {
+  console.log("hello");
+});
+
+//a function to shuffle the deck
+function shuffle(deck) {
+  for (var i = 0; i < 500; i++) {
+    var space1 = Math.floor(Math.random() * deck.length);
+    var space2 = Math.floor(Math.random() * deck.length);
+    var placeHolder = deck[space1];
+    deck[space1] = deck[space2];
+    deck[space2] = placeHolder;
+  }
+  return deck;
+}
+//push cards to gameboard
+
 });
 
 //add event listener for stand button which will play dealer's hand

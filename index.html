@@ -11,32 +11,40 @@
       rel="stylesheet"
     />
   </head>
-  <div class="grid container">
+  
   <header>Winner, winner, chicken dinner!</header>
   <body>
-<div class= dealerCardsRow>
-  <div class= dealerCardsRow id= dealerCards></div>
-</div>
-  <div class="payRule">
-    <h3 class="payRule" id="blackjackPay">Blackjack pays 3 to 2</p>
+  <div class="grid container">
+      <div class="playerOption">
+        <input class="playerOptions" type="button" value="New Game" id="newGame" />
+        <input class="playerOptions" type="button" value="Hit" id="hit" />
+        <input class="playerOptions" type="button" value="Stand" id="stand" />
+        <input class="playerOptions" type="button" value="Play Again" id="playAgain"/></div> 
+        <div class= "playerScoreSpace">
+          <h1 id= "playerScore">21</h3>
+    <div class= dealerCardsRow>
+      <div class= dealerCardsRow id= dealerCards></div>
+      </div>
+    <div class="payRule">
+      <h3 class="payRule" id="blackjackPay">Blackjack pays 3 to 2</p>
+    </div>
+    <div class="dealRule">
+      <h3 class="dealRule" id="softHit">Dealer must hit soft 17</p>
+    </div>
+      <div class="circle" id="circle1"></div>
+      <div class="circle" id= "circle2"></div>
+      <div class="circle" id= "circle3"></div>
+      <div class="circle" id= "circle4"></div>
+      <div class="circle" id= "circle5"></div>
+    </div>
+    <div class= playerCardsRow>
+      <div class= playerCardsRow id= playerCards></div>
+    </div>
   </div>
-  <div class="dealRule">
-    <h3 class="dealRule" id="softHit">Dealer must hit soft 17</p>
 </div>
-    <div class="circle" id="circle1"></div>
-    <div class="circle" id= "circle2"></div>
-    <div class="circle" id= "circle3"></div>
-    <div class="circle" id= "circle4"></div>
-    <div class="circle" id= "circle5"></div>
-<div class= playerCardsRow>
-  <div class= playerCardsRow id= playerCards></div>
-<div class="playerOption">
-    <input class="playerOptions" type="button" value="New Game" id="newGame" />
-    <input class="playerOptions" type="button" value="Hit" id="hit" />
-    <input class="playerOptions" type="button" value="Stand" id="stand" />
-    <input class="playerOptions" type="button" value="Play Again" id="playAgain"/></div> 
-  </div>
-    <script src="circletype.min.js"></script>
-    <script type="text/javascript" src="app.js"></script>
+</div>
+</div>
+      <script src="circletype.min.js"></script>
+      <script type="text/javascript" src="app.js"></script>
   </body>
 </html>

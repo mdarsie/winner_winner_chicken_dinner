@@ -94,3 +94,6 @@ body {
   margin: 10px;
   justify-self: center;
 }
+#playerScore {
+  color: white;
+}
