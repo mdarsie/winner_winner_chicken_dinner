@@ -14,10 +14,6 @@ Languages
 - CSS 3
 - Java
 
-Libraries
-
-- [CircleType.js](https://circletype.labwire.ca/)
-
 ## Wireframe & Trello Board
 
 [Trello board](https://trello.com/b/1CzxLqAz)
@@ -39,6 +35,11 @@ Libraries
 2. Each hand both you and the dealer will be dealt two cards. The dealer's first card, also known as a hole card, will be face up and visible to you.
 3. Using the buttons on screen you can either hit or stand. If you chose to hit you will be dealt another card, you can contine to hit until you reach 21 points, chose to stand or exceed 21 points. Exceeding 21 points will lose the hand and your wager.
 4. Once you stand it is the dealer's turn to play by also choosing to hit or stand.
-5. A natural Blackjack pays out at a 3:2 ratio to the wager.
-6. Any other win pays out at a 1:1 ratio to the wager.
-7. Like with all gambling, the secret is knowing when- _and then chosing to_- walk away from the table. After each hand you are presented the choice of cashing out or continuing to play. Play long enough and you will eventually go broke.
+
+## Future Improvements/ Version 2
+
+- enable player to place a bet on each hand
+- add insurance option
+- add ability to split and double down in appropriate scenarios
+- style gameboard to look more like an actual blackjack table
+- add a live probability counter that dynamically updates the odds of winning a given hand as cards are played
