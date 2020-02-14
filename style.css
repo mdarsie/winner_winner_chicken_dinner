@@ -20,11 +20,11 @@ body {
 }
 #blackjackPay {
   font-family: "Spectral SC", serif;
-  font-size: 50px;
+  font-size: 2.5em;
   color: #b50d02;
   text-align: center;
-  line-height: 50%;
   z-index: 1;
+  margin-top: 8rem;
 }
 .dealRule {
   grid-area: 7 / 1 / 7 / 9;
@@ -32,11 +32,13 @@ body {
 
 #softHit {
   font-family: "Spectral SC", serif;
-  font-size: 40px;
+  font-size: 2.5em;
   color: #f2cb05;
   text-align: center;
+  margin-top: 1rem;
+  line-height: 10%;
 }
-.dealerCard1 {
+/* .dealerCard1 {
   grid-area: 3 / 5 / 3 / 5;
   z-index: 1;
   font-size: 150px;
@@ -112,7 +114,7 @@ body {
   background: white;
   justify-self: end;
   border-radius: 5px;
-}
+} */
 .playerCard1 {
   grid-area: 11 / 5 / 11 / 5;
   z-index: 1;
@@ -146,40 +148,10 @@ body {
   justify-self: start;
   border-radius: 5px;
 }
-.playerCard4 {
-  grid-area: 11 / 4/ 11 / 4;
-  z-index: 4;
-  font-size: 150px;
-  width: 105px;
-  height: 135px;
-  line-height: 93%;
-  background: white;
-  justify-self: end;
-  border-radius: 5px;
-}
-.playerCard5 {
-  grid-area: 11 / 3/ 11 / 3;
-  z-index: 4;
-  font-size: 150px;
-  width: 105px;
-  height: 135px;
-  line-height: 93%;
-  background: white;
-  justify-self: end;
-  border-radius: 5px;
-}
-.playerCard6 {
-  grid-area: 11 / 2/ 11 / 2;
-  z-index: 4;
-  font-size: 150px;
-  width: 105px;
-  height: 135px;
-  line-height: 93%;
-  background: white;
-  justify-self: end;
-  border-radius: 5px;
-}
-.playerCard7 {
+
+/* 
+ */
+/* .playerCard7 {
   grid-area: 11 / 1/ 11 / 1;
   z-index: 4;
   font-size: 150px;
@@ -189,7 +161,7 @@ body {
   background: white;
   justify-self: end;
   border-radius: 5px;
-}
+} */
 #circle1 {
   grid-area: 9 / 2 / 13 / 4;
   justify-self: end;
@@ -229,4 +201,34 @@ body {
   height: 200px;
   border-radius: 50%;
   background: #166837 url(/assets/felt.png);
+}
+
+.leg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2.75rem;
+}
+#leg1 {
+}
+#leg2 {
+  transform: rotate(-45deg);
+}
+#leg3 {
+  transform: rotate(-90deg);
+}
+#leg4 {
+  transform: rotate(43deg);
+}
+#leg5 {
+  transform: rotate(225deg);
+}
+.chicken-container {
+  grid-area: 4/4/8/6;
+  display: block;
+}
+.chicken {
+  height: 20rem;
+  margin-left: auto;
+  margin-right: auto;
 }
