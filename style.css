@@ -20,11 +20,12 @@ body {
 }
 #blackjackPay {
   font-family: "Spectral SC", serif;
-  font-size: 2.5em;
+  font-size: 2.75em;
   color: #b50d02;
   text-align: center;
   z-index: 1;
-  margin-top: 8rem;
+  margin-top: 7rem;
+ 
 }
 .dealRule {
   grid-area: 7 / 1 / 7 / 9;
@@ -35,8 +36,8 @@ body {
   font-size: 2.5em;
   color: #f2cb05;
   text-align: center;
-  margin-top: 1rem;
-  line-height: 10%;
+  margin-top: 6rem;
+
 }
 /* .dealerCard1 {
   grid-area: 3 / 5 / 3 / 5;
