@@ -1,0 +1,106 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(20, 50px);
+}
+
+header {
+  grid-area: 1 / 1 / 1 / 9;
+  font-family: "Shrikhand", cursive;
+  font-size: 50px;
+  color: #f2cb05;
+  text-align: center;
+}
+
+body {
+  background: #166837 url(/assets/black-felt.png);
+}
+.payRule {
+  grid-area: 5 / 1 / 5 / 9;
+}
+#blackjackPay {
+  font-family: "Spectral SC", serif;
+  font-size: 2em;
+  color: #b50d02;
+  text-align: center;
+  z-index: 1;
+  margin-top: 9.5rem;
+}
+.dealRule {
+  grid-area: 7 / 1 / 7 / 9;
+}
+
+#softHit {
+  font-family: "Spectral SC", serif;
+  font-size: 2em;
+  color: #f2cb05;
+  text-align: center;
+  margin-top: 5rem;
+}
+#circle1 {
+  grid-area: 10 / 3 / 13 / 5;
+  justify-self: start;
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+  background: #166837 url(/assets/felt.png);
+}
+#circle2 {
+  grid-area: 11 / 4 / 15 / 6;
+  justify-self: center;
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+  background: #166837 url(/assets/felt.png);
+}
+#circle3 {
+  grid-area: 10 / 5 / 13 / 7;
+  justify-self: end;
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+  background: #166837 url(/assets/felt.png);
+}
+#circle4 {
+  grid-area: 7 / 2 / 9 / 4;
+  justify-self: start;
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+  background: #166837 url(/assets/felt.png);
+}
+#circle5 {
+  grid-area: 7 / 6 / 9 / 8;
+  justify-self: end;
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+  background: #166837 url(/assets/felt.png);
+}
+
+.leg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+}
+#leg1 {
+}
+#leg2 {
+  transform: rotate(-45deg);
+}
+#leg3 {
+  transform: rotate(-90deg);
+}
+#leg4 {
+  transform: rotate(43deg);
+}
+#leg5 {
+  transform: rotate(225deg);
+}
+.chicken-container {
+  grid-area: 4/4/8/6;
+}
+.chicken {
+  margin: auto;
+}
