@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" content = "user-scalable=no" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Winner, winner, chicken dinner!</title>
     <link rel="stylesheet" href="style.css" />
@@ -10,36 +10,21 @@
       href="https://fonts.googleapis.com/css?family=Playfair+Display:400i,900i|Shrikhand|Spectral+SC&display=swap"
       rel="stylesheet"
     />
+    
   </head>
-  <div class="grid container">
+<div class="grid container">
   <header>Winner, winner, chicken dinner!</header>
   <body>
-    <!-- <div class="dealerCard1">&#127137</div>
-    <div class="dealerCard2">&#127137</div>
-    <div class="dealerCard3">&#127137</div>
-    <div class="dealerCard4">&#127137</div>
-    <div class="dealerCard5">&#127137</div>
-    <div class="dealerCard6">&#127137</div>
-    <div class="dealerCard7">&#127137</div> -->
-    
-    <!-- <div class="playerCard1">&#127137</div>
-    <div class="playerCard2">&#127137</div>
-    <div class="playerCard3">&#127137</div> -->
-    <!-- <div class="playerCard4">&#127137</div>
-    <div class="playerCard5">&#127137</div>
-    <div class="playerCard6">&#127137</div>
-    <div class="playerCard7">&#127137</div> -->
+   
     <div class='chicken-container'>
       <img src='assets/g2741.png' alt='chicken icon' class='chicken'>
     </div>    
     <div class="payRule">
       <p class="payRule" id="blackjackPay">blackjack pays 3 to 2</p>
-  </div>
+    </div>
   <div class="dealRule">
     <p class="dealRule" id="softHit">dealer must hit soft 17</p>
-</div>
-    <!-- <div class="tablerules" id="dealerRule">Dealer must hit soft 17</div>> -->
-    
+  </div>    
 
 
     <div class="circle" id="circle1">
@@ -58,17 +43,8 @@
       <img class='leg' id='leg5' src='assets/chicken_leg.png' alt='chicken leg icon'> 
     </div>
   
-
-    <div class="playerOption">
-    <input class="playerOptions" type="button" value="New Game" id="newGame" />
-    <input class="playerOptions" type="button" value="Hit" id="hit" />
-    <input class="playerOptions" type="button" value="Stand" id="stand" />
-    <input class="playerOptions" type="button" value="Play Again" id="playAgain"/></div>
-   
-
-    
-  </div>
-    <script src="circletype.min.js"></script>
-    <script type="text/javascript" src="app.js"></script>
+</div>
+<script src="circletype.min.js"></script>
+<script type="text/javascript" src="circle.js"></script>
   </body>
 </html>
