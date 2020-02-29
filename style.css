@@ -21,11 +21,11 @@ body {
 }
 #blackjackPay {
   font-family: "Spectral", serif;
-  font-size: 2.75em;
+  font-size: 2.5em;
   color: #b50d02;
   text-align: center;
   z-index: 1;
-  margin-top: 7rem;
+  margin-top: 8.25rem;
  
 }
 .PayShadow { 
@@ -36,18 +36,18 @@ body {
 
 #softHit {
   font-family: "Spectral", serif;
-  font-size: 2.5em;
+  font-size: 2.25em;
   color: #e0df14;
   text-align: center;
-  margin-top: 3.75rem;
+  margin-top: 7rem;
 }
 #insuranceRule{
   grid-area: 7 / 1 / 7 / 9;
   font-family: "Spectral", serif;
-  font-size: 2.5em;
-  color: #371668;
+  font-size: 2em;
+  color: #b50d02;
   text-align: center;
-  margin-top: 2.5rem;
+  margin-top: 4.25rem;
   text-shadow: 1px 1px 1px #e0df14;
 }
 /* .dealerCard1 {
