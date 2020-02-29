@@ -197,6 +197,44 @@ dealAgainButton.addEventListener("click", function() {
   }
 });
 
+class Card {
+  constructor(suit, value) {
+    this.suit = suit;
+    this.value = value;
+  }
+}
+
+class Deck {
+  constructor() {
+    this.length = 0;
+    this.cards = [];
+    const suits = ["Hearts", "Diamonds", "Spades", "Clubs"];
+    const values = [
+      "Ace",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "Jack",
+      "Queen",
+      "King"
+    ];
+    for (let i = 0; i < suits.length; i++) {
+      for (let j = 0; j < ranks.length; j++) {
+        const newCard = new Card(suits[i], values[j]);
+        this.cards.push(newCard);
+      }
+    }
+  }
+}
+
+const deck = new Deck();
+
 // add values to array to create deck of cards
 function shuffle() {
   let deck = [
