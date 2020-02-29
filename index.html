@@ -2,43 +2,52 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" content = "user-scalable=no" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Winner, winner, chicken dinner!</title>
     <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Playfair+Display:400i,900i|Shrikhand|Spectral+SC&display=swap"
+    <link rel="stylesheet" media="screen and (max-width: 400px)" href="mobile.css">    <link
+      href="https://fonts.googleapis.com/css?family=Playfair+Display:400i,900i|Shrikhand|Spectral&display=swap"
       rel="stylesheet"
     />
+    
   </head>
-  <header>Winner, winner, chicken dinner!</header>
+<div class="grid container">
+  <header></header>
   <body>
-    <div class="playerOption">
-      <input
-        class="playerOptions"
-        type="button"
-        value="New Game"
-        id="newGame"
-      />
-      <input class="playerOptions" type="button" value="Hit" id="hit" />
-      <input class="playerOptions" type="button" value="Stand" id="stand" />
-      <input
-        class="playerOptions"
-        type="button"
-        value="Play Again"
-        id="playAgain"
-      />
-    </div class= "scores"></div>
-      <div class="playerScoreSpace">
-        <h1 id="playerScore">Player:</h1>
-      <div class= "dealerScoreSpace"></div>
-        <h1 id="dealerScore">Dealer:</h1>
-      <div class="dealerCardsRow">
-        <div class="dealerCardsRow" id="dealerCards"></div>
-    <div class="playerCardsRow">
-      <div class="playerCardsRow" id="playerCards"></div>
-      </div>
+   
+    <div class='chicken-container'>
+      <img src='assets/g2741.png' alt='chicken icon' class='chicken'>
+    </div>    
+    <div class="payRule">
+      <p class="payRule PayShadow" id="blackjackPay">BLACKJACK PAYS 3 to 2</p>
     </div>
-    <script type="text/javascript" src="app.js"></script>
+  <div class="dealRule">
+    <p class="dealRule" id="softHit">Dealer Must Hit Soft 17</p>
+  </div> 
+  <div id="insuranceRule">
+    <p class="insuranceRule" >2 to 1 &#8226; INSURANCE PAYS &#8226; 2 to 1</p>
+  </div>   
+
+
+    <div class="circle" id="circle1">
+      <img class='leg' id='leg1' src='assets/chicken_leg.png' alt='chicken leg icon'> 
+    </div>
+    <div class="circle" id= "circle2">
+      <img class='leg' id='leg2' src='assets/chicken_leg.png' alt='chicken leg icon'> 
+    </div>
+    <div class="circle" id= "circle3">
+      <img class='leg' id='leg3' src='assets/chicken_leg.png' alt='chicken leg icon'> 
+    </div>
+    <div class="circle" id= "circle4">
+      <img class='leg' id='leg4' src='assets/chicken_leg.png' alt='chicken leg icon'> 
+    </div>
+    <div class="circle" id= "circle5">
+      <img class='leg' id='leg5' src='assets/chicken_leg.png' alt='chicken leg icon'> 
+    </div>
+  
+</div>
+<script src="circletype.min.js"></script>
+<script type="text/javascript" src="circle.js"></script>
   </body>
 </html>
