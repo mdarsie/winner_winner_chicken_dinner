@@ -17,10 +17,10 @@ body {
   min-width: 1100px;
 }
 .payRule {
-  grid-area: 5 / 1 / 5 / 9;
+  grid-area: 4 / 1 / 4 / 9;
 }
 #blackjackPay {
-  font-family: "Spectral SC", serif;
+  font-family: "Spectral", serif;
   font-size: 2.75em;
   color: #b50d02;
   text-align: center;
@@ -31,16 +31,24 @@ body {
 .PayShadow { 
   text-shadow: 1px 1px 1px #e0df14; }
 .dealRule {
-  grid-area: 7 / 1 / 7 / 9;
+  grid-area: 6 / 1 / 6 / 9;
 }
 
 #softHit {
-  font-family: "Spectral SC", serif;
+  font-family: "Spectral", serif;
   font-size: 2.5em;
   color: #e0df14;
   text-align: center;
   margin-top: 3.75rem;
-
+}
+#insuranceRule{
+  grid-area: 7 / 1 / 7 / 9;
+  font-family: "Spectral", serif;
+  font-size: 2.5em;
+  color: #371668;
+  text-align: center;
+  margin-top: 2.5rem;
+  text-shadow: 1px 1px 1px #e0df14;
 }
 /* .dealerCard1 {
   grid-area: 3 / 5 / 3 / 5;
@@ -228,7 +236,7 @@ body {
   transform: rotate(225deg);
 }
 .chicken-container {
-  grid-area: 3/4/8/6;
+  grid-area: 2/4/8/6;
 }
 .chicken{
   margin: auto;
