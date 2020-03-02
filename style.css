@@ -16,22 +16,6 @@ body {
   background: #166837 url(/assets/black-felt.png);
   min-width: 1100px;
 }
-<<<<<<< HEAD
-.card {
-  height: 150px;
-  margin: 10px;
-  justify-self: center;
-}
-#dealerCardsRow {
-  height: 150px;
-}
-#playerCardsRow {
-  height: 150px;
-}
-.scores {
-  color: white;
-  font: 50px;
-=======
 .payRule {
   grid-area: 4 / 1 / 4 / 9;
 }
@@ -229,7 +213,6 @@ body {
   height: 175px;
   border-radius: 50%;
   background: #166837 url(/assets/felt.png);
->>>>>>> old-branch-better-style
 }
 
 .leg {
