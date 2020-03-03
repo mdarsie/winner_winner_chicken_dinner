@@ -26,10 +26,10 @@ body {
   text-align: center;
   z-index: 1;
   margin-top: 8.25rem;
- 
 }
-.PayShadow { 
-  text-shadow: 1px 1px 1px #e0df14; }
+.PayShadow {
+  text-shadow: 1px 1px 1px #e0df14;
+}
 .dealRule {
   grid-area: 6 / 1 / 6 / 9;
 }
@@ -41,7 +41,7 @@ body {
   text-align: center;
   margin-top: 7.3rem;
 }
-#insuranceRule{
+#insuranceRule {
   grid-area: 7 / 1 / 7 / 9;
   font-family: "Spectral", serif;
   font-size: 2em;
@@ -50,11 +50,11 @@ body {
   margin-top: 4.75rem;
   text-shadow: 1px 1px 1px #e0df14;
 }
-.dealerHand{
+.dealerHand {
   grid-area: 3/3/6/7;
 }
 #dealerCard1 {
-  display:flex;
+  display: flex;
   justify-content: center;
   z-index: 1;
   font-size: 150px;
@@ -63,66 +63,35 @@ body {
   background: white;
   border-radius: 5px;
 }
-.dealerCard2 {
-  
+#dealerCard2 {
 }
-.dealerCard3 {
-  
+#dealerCard3 {
 }
-.dealerCard4 {
-  
+#dealerCard4 {
 }
-.dealerCard5 {
-  
+#dealerCard5 {
+}
+.playerHand {
+  grid-area: 12/3/15/7;
 }
 
-/* .playerCard1 {
-  grid-area: 11 / 5 / 11 / 5;
-  z-index: 1;
+#playerCard1 {
+  display: flex;
+  justify-content: center;
   font-size: 150px;
   width: 105px;
   height: 135px;
-  line-height: 93%;
   background: white;
-  justify-self: end;
   border-radius: 5px;
 }
-.playerCard2 {
-  grid-area: 11 / 5 / 11 / 5;
-  z-index: 2;
-  font-size: 150px;
-  width: 105px;
-  height: 135px;
-  line-height: 93%;
-  background: white;
-  justify-self: center;
-  border-radius: 5px;
+#playerCard2 {
 }
-.playerCard3 {
-  grid-area: 11 / 5 / 11 / 5;
-  z-index: 3;
-  font-size: 150px;
-  width: 105px;
-  height: 135px;
-  line-height: 93%;
-  background: white;
-  justify-self: start;
-  border-radius: 5px;
-} */
-
-/* 
- */
-/* .playerCard7 {
-  grid-area: 11 / 1/ 11 / 1;
-  z-index: 4;
-  font-size: 150px;
-  width: 105px;
-  height: 135px;
-  line-height: 93%;
-  background: white;
-  justify-self: end;
-  border-radius: 5px;
-} */
+#playerCard3 {
+}
+#playerCard4 {
+}
+#playerCard5 {
+}
 #circle1 {
   grid-area: 10 / 3 / 13 / 5;
   justify-self: start;
@@ -187,6 +156,6 @@ body {
 .chicken-container {
   grid-area: 2/4/8/6;
 }
-.chicken{
+.chicken {
   margin: auto;
 }
