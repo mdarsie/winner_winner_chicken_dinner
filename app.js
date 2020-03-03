@@ -64,6 +64,20 @@ class Deck {
 
 const deck = new Deck();
 
+//fisher-yates shuffle
+function shuffle(deck) {
+  var x = deck.length,
+    y,
+    i;
+  while (x) {
+    i = Math.floor(Math.random() * x--);
+    y = deck[x];
+    deck[x] = deck[i];
+    array[i] = y;
+  }
+  return deck;
+}
+
 //a function to determine the values of the cards
 // function cardValue(card) {
 //   switch (card[0]) {
