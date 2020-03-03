@@ -5,4 +5,4 @@ const circleTypeB = new CircleType(document.getElementById("softHit"));
 circleTypeB.radius(320).dir(-1);
 
 const circleTypeC = new CircleType(document.getElementById("insuranceRule"));
-circleTypeC.radius(350).dir(-1);
+circleTypeC.radius(330).dir(-1);
